@@ -34,7 +34,7 @@ Files:
 
 ## Dataset
 
-The data for this project is from the UCI Machine Learning Repository titled [Energy Efficiency Data Set](https://archive.ics.uci.edu/ml/datasets/Energy+efficiency). It is composed of 768 samples of data created by Angeliki Xifara [[1]](#References) for buildings with different architecture characteristics in Athens, Greece. The dataset was also explored by Sadeghi et. al. [[2]](#References). Some of the below variable descriptions are from that paper as well.
+The data for this project is from the UCI Machine Learning Repository titled [Energy Efficiency Data Set](https://archive.ics.uci.edu/ml/datasets/Energy+efficiency). It is composed of 768 samples of data created by Angeliki Xifara [[1]](#References) for buildings with different architecture characteristics in Athens, Greece. The dataset was also explored by Sadeghi et. al. [[2]](#References).
 
 ### Input Features
 
@@ -102,7 +102,7 @@ Five other hyperparameters used in the neural network were not included in the B
 
 The Bayesian Optimization took a little over an hour to run in single-core mode on a standard laptop. The results of the Bayesian Optimization showed the optimal combination of hyperparameters for the neural network:
 
-* Number of layers: 3
+* Number of hidden layers: 3
 * Number of nodes in first hidden layer: 17
 * Number of nodes in second hidden layer: 10
 * Number of nodes in third hidden layer: 3
