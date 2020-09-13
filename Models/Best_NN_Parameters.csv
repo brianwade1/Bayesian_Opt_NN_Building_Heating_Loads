@@ -1,0 +1,2 @@
+FC_1,FC_2,FC_3,num_layers_set,InitialLearnRate,Momentum,solverName,batch_size,L2Regularization
+17,10,6,3,0.0102397002907847,0.825956527280678,adam,2,6.73070265117049e-05
