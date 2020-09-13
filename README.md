@@ -75,7 +75,7 @@ The next step was to develop the optimal neural network to predict the heating l
 &nbsp;
 
 | Variable | Description | Type | Range [min max] |
-| ------ | --------- | --------- | --------- | --------- |
+| ------ | --------- | ----- | --------- |
 | FC_1 | Number of nodes in the first hidden layer | Integer | [12, 20] |
 | FC_2 | Number of nodes in the second hidden layer | Integer | [7, 12] |
 | FC_3 | Number of nodes in the third hidden layer | Integer | [2, 7] |
