@@ -70,7 +70,7 @@ The first step in the analysis was to explore the data for any initial insights 
 
 ## Bayesian Optimization of the Hyperparameters
 
-The next step was to develop the optimal neural network to predict the heating load (Y1). This was done using the Bayesian Optimization Function provided in the Matlab Statistics and Machine Learning Toolbox. The hyperparameters explored and their ranges are below.
+The next step was to develop the optimal neural network to predict the heating load (Y1). This was done using the Bayesian Optimization Function provided in the Matlab Statistics and Machine Learning Toolbox. The hyperparameters explored and their ranges are below. The objective function for the Bayesian optimization was to minimize the root mean squared error (RMSE) of the validation set (15% of the data also used for early stopping)
 
 &nbsp;
 
@@ -102,13 +102,20 @@ Five other hyperparameters used in the neural network were not included in the B
 
 The Bayesian Optimization took a little over an hour to run in single-core mode on a standard laptop. The results of the Bayesian Optimization showed the optimal combination of hyperparameters for the neural network:
 
-![Sample Output](/Images/Bayesian_Optimization_Results.png)
+* Number of layers: 3
+* Number of nodes in first hidden layer: 17
+* Number of nodes in second hidden layer: 10
+* Number of nodes in third hidden layer: 3
+* Backpropagation Optimizer: adam
+* Initial learning rate: 0.01024
+* Batch Size: 8
+* L2 Regularization Factor: 6.7307e-5
 
 ---
 
 ## Neural Net Model
 
-The program used a fully-connected feed-forward neural network consisting of three hidden layers. The input layer had 12 nodes (X8 was converted to one-hot-encoding resulting in 7 original inputs X1-X7 and five inputs for the X8 one-hot-encoded vector), and output layer had one node. Each of the three hidden layers was followed by a [leaky rectified linear activation function](https://www.mathworks.com/help/deeplearning/ref/nnet.cnn.layer.leakyrelulayer.html) (LReLu). The neural network was then trained using the optimized hyperparameters on 75% of the data (training set). 25% of the data was for early stopping during training (validation set), and the final neural network was tested on 10% of the data which was withheld from all training (test set).
+The program used a fully-connected feed-forward neural network consisting of three hidden layers. The input layer had 12 nodes (X8 was converted to one-hot-encoding resulting in 7 original inputs X1-X7 and five inputs for the X8 one-hot-encoded vector), and output layer had one node. Each of the three hidden layers was followed by a [leaky rectified linear activation function](https://www.mathworks.com/help/deeplearning/ref/nnet.cnn.layer.leakyrelulayer.html) (LReLu). The neural network was then trained using the optimized hyperparameters on 75% of the data (training set). 15% of the data was for early stopping during training (validation set), and the final neural network was tested on 10% of the data which was withheld from all training (test set).
 
 ![Sample Output](/Images/Network.png)
 
