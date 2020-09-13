@@ -79,12 +79,12 @@ The next step was to develop the optimal neural network to predict the heating l
 | FC_1 | Number of nodes in the first hidden layer | Integer | [12, 20] |
 | FC_2 | Number of nodes in the second hidden layer | Integer | [7, 12] |
 | FC_3 | Number of nodes in the third hidden layer | Integer | [2, 7] |
-| num_layers_set | Number of hidden layers in the model | Integer | [1 3] |
-| InitialLearnRate | Initial learning rate of the neural net backpropagation optimizer | Continuous (on log scale) | [0.01 1] |
-| Momentum | Momentum for use only with stochastic gradient descent with momentum (sgdm) optimizer | Continuous | [0.8 0.99] |
+| num_layers_set | Number of hidden layers in the model | Integer | [1, 3] |
+| InitialLearnRate | Initial learning rate of the neural net backpropagation optimizer | Continuous (on log scale) | [0.01, 1] |
+| Momentum | Momentum for use only with stochastic gradient descent with momentum (sgdm) optimizer | Continuous | [0.8, 0.99] |
 | solverName | Optimizer used during the backpropagation training of the neural net | Categorical | [sgdm, rmsprop, adam] |
 | batch_size | Number of samples in each batch for stochastic gradient descent | Categorical | [4, 8, 16, 32, 64, 128, 256, 512] |
-| L2Regularization | L2 Regularization factor used to multiply by the net weights and added to the loss function during backpropagation | Continuous (on log scale) | [1e-10 1e-2] |
+| L2Regularization | L2 Regularization factor used to multiply by the net weights and added to the loss function during backpropagation | Continuous (on log scale) | [1e-10, 1e-2] |
 
 &nbsp;
 
