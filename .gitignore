@@ -2,4 +2,7 @@
 *.asv
 
 #self
-.gitignor
+.gitignore
+
+# vscode files
+*.vscode
